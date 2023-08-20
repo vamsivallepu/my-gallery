@@ -2,6 +2,9 @@
 
 A simple image uploading website built using Django for the backend and Angular for the frontend.
 
+[Project Demo.webm](https://github.com/vamsivallepu/my-gallery/assets/53989958/35ed6285-2cf8-4ab7-9120-204b738f5e4c)
+
+
 ## Getting Started
 
 Follow these steps to set up the project on your local machine.
