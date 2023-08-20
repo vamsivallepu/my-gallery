@@ -1,0 +1,25 @@
+<!-- If the user is logged in -->
+<div class="container" *ngIf="logged_in">
+  <div *ngIf="found">
+    <div>
+      <img [src]="details.image" class="img-fluid rounded" alt="" />
+    </div>
+    <br />
+    <div class="text-center">
+      <h2>{{ details.title }}</h2>
+      <p><b>Description </b> : {{ details.description }}</p>
+      <button class="btn btn-danger" (click)="deleteImage()">Delete</button>
+    </div>
+  </div>
+
+  <!-- if the image with corresponding ID doesn't found or not associated with the authenticated user -->
+  <div class="not-found" *ngIf="!found">
+    <h2>You Can't Access This Image Or Image Doesn't Exist 🚫</h2>
+  </div>
+</div>
+
+<!-- If the user is not logged in -->
+<div class="not-logged-in" *ngIf="!logged_in">
+  <p>Please Login To Access Your Images</p>
+  <button [routerLink]="'/login'" class="btn btn-primary">Log In</button>
+</div>

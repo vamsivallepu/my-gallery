@@ -1,0 +1,32 @@
+<!-- IF the user is not logged In -->
+<div class = "not-logged-in" *ngIf = !logged_in >
+  <p>Log In See Your Awesome Pictures😎</p>
+  <button [routerLink]="['login']" class = "btn btn-primary">Log In</button>
+</div>
+
+<!-- IF the user is logged In -->
+<div *ngIf="logged_in">
+  <div class="name">
+    <p class="fs-4 salutation">Hello {{name}}👋</p>
+  </div>
+
+  <!-- If there are no images to display -->
+  <div class = "not-logged-in" *ngIf = !images.length>
+    <p>No Images Found ☹️</p>
+    <button [routerLink]="['upload']" class = "btn btn-primary">Upload Now</button>
+  </div>
+
+  <!-- If there are images to display -->
+  <div class="container">
+    <div class="image-grid">
+
+      <!-- Looping through all the available images and displaying -->
+      <div class="image-card" *ngFor="let image of images">
+        <a [routerLink]="['/image', image.id]"
+          ><img [src]="image.image" alt="{{ image.title }}" />
+        </a>
+        <p>{{ image.title }}</p>
+      </div>
+    </div>
+  </div>
+</div>

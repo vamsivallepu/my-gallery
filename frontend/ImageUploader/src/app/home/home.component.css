@@ -1,0 +1,50 @@
+.image-grid {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr); /* Display 4 images per row */
+  gap: 25px;
+  margin: 0 auto;
+}
+
+.salutation {
+  /* margin-left: -600px; */
+  display: flex;
+  justify-content: center;
+  margin-top: -35px;
+  color: crimson;
+  text-transform: capitalize;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.image-card {
+
+  background-color: #f0f0f0;
+  padding: 8px 5px 20px 5px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width : 250px;
+  height : 150px;
+  text-align: center;
+  /* padding-bottom: 0%; */
+}
+
+.image-card:hover {
+  transform: scale(1.05);
+}
+
+.image-card img {
+  width: 90%;
+  max-height: 90%;
+  border-radius: 5px;
+}
+
+.image-card p {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #333;
+}

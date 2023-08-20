@@ -1,0 +1,29 @@
+<div class="upload-container" *ngIf = "logged_in">
+    <form (ngSubmit)="uploadImage()" enctype="multipart/form-data">
+      <h1 class="h3 mb-3 fw-normal">Upload New ✨</h1>
+
+      <div class="form-floating">
+        <input type="text" name="title" [(ngModel)]="imageTitle" class="form-control"
+        id="floatingInput" placeholder="Title">
+        <label for="floatingInput">Title</label>
+      </div> 
+
+      <div class="form-floating">
+        <textarea class="form-control"  name="description" [(ngModel)]="imageDescription" placeholder="Description"></textarea>
+        <label for="floatingInput">Description</label>
+      </div>
+      <div class="mb-3">
+        <input class="form-control" id="formFile" type="file" name="image" accept="image/*" (change)="handleImageChange($event)">
+      </div>
+
+      <p class="error-message">{{errorMessage}}</p>
+      <button class="btn btn-primary" type="submit">Upload</button>
+    </form>
+  </div>
+
+  <!-- If the User not logged in -->
+  <div class = "not-logged-in" *ngIf = !logged_in >
+    <p>Log In Upload Your Awesome Pictures😎</p>
+    <button [routerLink]="'/login'" class = "btn btn-primary">Log In</button>
+  </div>
+  
