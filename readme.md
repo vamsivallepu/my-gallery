@@ -2,6 +2,7 @@
 
 A simple image uploading website built using Django for the backend and Angular for the frontend.
 
+
 ## Getting Started
 
 Follow these steps to set up the project on your local machine.
